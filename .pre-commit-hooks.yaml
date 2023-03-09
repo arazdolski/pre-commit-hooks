@@ -1,0 +1,7 @@
+- id: valid-branch-name
+  name: use valid branch name
+  entry: valid-branch-name
+  language: python
+  pass_filenames: false
+  always_run: true
+  additional_dependencies: [GitPython]
