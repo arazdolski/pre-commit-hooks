@@ -14,10 +14,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     active_branch = Repo().head.ref.name
     compiled_regex = re.compile(args.regex[0])
 
-    retval = 0
+    exit_code = 0
     if compiled_regex.match(active_branch) is None:
-        retval = 1
-    return retval
+        exit_code = 1
+    return exit_code
 
 
 if __name__ == "__main__":
